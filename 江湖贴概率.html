@@ -84,8 +84,38 @@
             box-shadow: 0 0 0 3px rgba(226, 176, 74, 0.15);
         }
 
-        input:hover {
+        input:hover,
+        select:hover {
             border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.25s;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e2b04a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 36px;
+        }
+
+        select:focus {
+            border-color: #e2b04a;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 3px rgba(226, 176, 74, 0.15);
+        }
+
+        select option {
+            background: #1a1a2e;
+            color: #fff;
         }
 
         .input-row {
@@ -192,8 +222,13 @@
                 <input type="number" id="份数" value="7" step="1" min="7">
             </div>
             <div class="form-group">
-                <label>品级 <span class="label-unit">%</span></label>
-                <input type="number" id="品级" value="20" step="0.1">
+                <label>品级 <span class="label-unit"></span></label>
+                <select id="品级">
+                    <option value="20" selected>神传</option>
+                    <option value="15">特</option>
+                    <option value="10">优</option>
+                    <option value="5">可</option>
+                </select>
             </div>
         </div>
 
@@ -293,8 +328,9 @@
         }
 
         // 监听所有输入变化
-        document.querySelectorAll('input').forEach(el => {
+        document.querySelectorAll('input, select').forEach(el => {
             el.addEventListener('input', calc);
+            el.addEventListener('change', calc);
         });
 
         // 初始计算
