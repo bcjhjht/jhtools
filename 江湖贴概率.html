@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: #f0f2f5;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,181 +22,173 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 40px;
             width: 100%;
             max-width: 520px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
         }
 
         h1 {
             text-align: center;
-            color: #e2b04a;
-            font-size: 28px;
-            margin-bottom: 8px;
+            color: #b8860b;
+            font-size: 26px;
+            margin-bottom: 6px;
             letter-spacing: 2px;
         }
 
         .subtitle {
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: #999;
             font-size: 13px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         label {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: rgba(255, 255, 255, 0.85);
+            color: #333;
             font-size: 14px;
             margin-bottom: 6px;
         }
 
         .label-unit {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 12px;
+            color: #888;
+            font-size: 13px;
         }
 
         input {
             width: 100%;
             padding: 10px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.06);
-            color: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            background: #fafafa;
+            color: #333;
             font-size: 16px;
             transition: all 0.25s;
             outline: none;
         }
 
         input:focus {
-            border-color: #e2b04a;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 0 3px rgba(226, 176, 74, 0.15);
+            border-color: #b8860b;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
         }
 
         input:hover,
         select:hover {
-            border-color: rgba(255, 255, 255, 0.3);
+            border-color: #b8860b;
         }
 
         select {
             width: 100%;
             padding: 10px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.06);
-            color: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            background: #fafafa;
+            color: #333;
             font-size: 16px;
             transition: all 0.25s;
             outline: none;
             appearance: none;
             cursor: pointer;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e2b04a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23b8860b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 14px center;
             padding-right: 36px;
         }
 
         select:focus {
-            border-color: #e2b04a;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 0 3px rgba(226, 176, 74, 0.15);
+            border-color: #b8860b;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
         }
 
         select option {
-            background: #1a1a2e;
-            color: #fff;
+            background: #fff;
+            color: #333;
         }
 
         .input-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 14px;
         }
 
         .divider {
             border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            margin: 28px 0;
+            border-top: 1px solid #eee;
+            margin: 24px 0;
         }
 
         .results {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
             margin-bottom: 20px;
         }
 
         .result-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 16px;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 14px;
             text-align: center;
             transition: all 0.3s;
         }
 
         .result-card.highlight {
-            border-color: rgba(226, 176, 74, 0.3);
-            background: rgba(226, 176, 74, 0.06);
+            border-color: #e6c34a;
+            background: #fef9e7;
         }
 
         .result-label {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-            margin-bottom: 6px;
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 4px;
         }
 
         .result-value {
-            color: #fff;
-            font-size: 24px;
+            color: #333;
+            font-size: 22px;
             font-weight: 700;
             letter-spacing: 1px;
         }
 
         .result-card.highlight .result-value {
-            color: #e2b04a;
+            color: #b8860b;
         }
 
         .result-unit {
-            color: rgba(255, 255, 255, 0.35);
-            font-size: 11px;
-            margin-top: 2px;
+            color: #888;
+            font-size: 13px;
+            margin-left: 2px;
+            font-weight: 400;
         }
 
         .footer {
             text-align: center;
-            margin-top: 32px;
+            margin-top: 24px;
         }
 
-        .footer a {
-            color: rgba(255, 255, 255, 0.3);
+        .footer span {
+            color: #bbb;
             font-size: 12px;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer a:hover {
-            color: rgba(255, 255, 255, 0.6);
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 24px 20px;
-                border-radius: 18px;
+                padding: 24px 18px;
+                border-radius: 12px;
             }
             h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
             .input-row {
                 grid-template-columns: 1fr;
@@ -206,7 +198,7 @@
                 gap: 8px;
             }
             .result-value {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
     </style>
@@ -219,7 +211,7 @@
         <div class="input-row">
             <div class="form-group">
                 <label>份数 <span class="label-unit"></span></label>
-                <input type="number" id="份数" value="7" step="1" min="7">
+                <input type="number" id="份数" value="7" step="1" min="0">
             </div>
             <div class="form-group">
                 <label>品级 <span class="label-unit"></span></label>
@@ -235,28 +227,28 @@
         <div class="input-row">
             <div class="form-group">
                 <label>帖率 <span class="label-unit">%</span></label>
-                <input type="number" id="帖率" value="80" step="0.1">
+                <input type="number" id="帖率" value="80" step="1" min="0">
             </div>
             <div class="form-group">
                 <label>金帖率 <span class="label-unit">%</span></label>
-                <input type="number" id="金帖率" value="5" step="0.1">
+                <input type="number" id="金帖率" value="5" step="1" min="0">
             </div>
         </div>
 
         <div class="input-row">
             <div class="form-group">
                 <label>暴击概率 <span class="label-unit">%</span></label>
-                <input type="number" id="暴击概率" value="0" step="0.1">
+                <input type="number" id="暴击概率" value="0" step="1" min="0">
             </div>
             <div class="form-group">
                 <label>开业时间减少 <span class="label-unit">%</span></label>
-                <input type="number" id="开业时间减少" value="34.9" step="0.1">
+                <input type="number" id="开业时间减少" value="34.9" step="any" min="0" max="99">
             </div>
         </div>
 
         <div class="form-group">
-            <label>原营业时间 <span class="label-unit">秒</span></label>
-            <input type="number" id="原营业时间" value="651" step="1" min="1">
+            <label>单份时间 <span class="label-unit">秒</span></label>
+            <input type="number" id="单份时间" value="93" step="1" min="1">
         </div>
 
         <hr class="divider">
@@ -264,43 +256,48 @@
         <div class="results">
             <div class="result-card">
                 <div class="result-label">实际帖率</div>
-                <div class="result-value" id="out-帖率">--</div>
-                <div class="result-unit">%</div>
+                <div class="result-value" id="out-帖率">--<span class="result-unit">%</span></div>
             </div>
             <div class="result-card">
                 <div class="result-label">实际金帖率</div>
-                <div class="result-value" id="out-金帖率">--</div>
-                <div class="result-unit">%</div>
+                <div class="result-value" id="out-金帖率">--<span class="result-unit">%</span></div>
             </div>
             <div class="result-card highlight">
                 <div class="result-label">净琉璃效率</div>
-                <div class="result-value" id="out-净琉璃">--</div>
-                <div class="result-unit">/天</div>
+                <div class="result-value" id="out-净琉璃">--<span class="result-unit">/天</span></div>
             </div>
             <div class="result-card highlight">
                 <div class="result-label">等效琉璃效率</div>
-                <div class="result-value" id="out-等效琉璃">--</div>
-                <div class="result-unit">/天</div>
+                <div class="result-value" id="out-等效琉璃">--<span class="result-unit">/天</span></div>
             </div>
         </div>
 
         <p class="footer">
-            <span style="color:rgba(255,255,255,0.25);font-size:12px;">数值实时计算，修改参数即更新</span>
+            <span>数值实时计算，修改参数即更新</span>
         </p>
     </div>
 
     <script>
         function calc() {
-            const 份数 = parseFloat(document.getElementById('份数').value) || 7;
+            const 份数 = parseInt(document.getElementById('份数').value);
             const 帖率 = parseFloat(document.getElementById('帖率').value) || 0;
             const 金帖率 = parseFloat(document.getElementById('金帖率').value) || 0;
             const 品级 = parseFloat(document.getElementById('品级').value) || 0;
             const 暴击概率 = parseFloat(document.getElementById('暴击概率').value) || 0;
-            const 原营业时间 = parseFloat(document.getElementById('原营业时间').value) || 1;
+            const 单份时间 = parseFloat(document.getElementById('单份时间').value) || 1;
             const 开业时间减少 = parseFloat(document.getElementById('开业时间减少').value) || 0;
 
+            // 份数无效或低于 7，全部归零
+            if (!(份数 >= 7)) {
+                document.getElementById('out-帖率').innerHTML = '0.00<span class="result-unit">%</span>';
+                document.getElementById('out-金帖率').innerHTML = '0.00<span class="result-unit">%</span>';
+                document.getElementById('out-净琉璃').innerHTML = '0<span class="result-unit">/天</span>';
+                document.getElementById('out-等效琉璃').innerHTML = '0<span class="result-unit">/天</span>';
+                return;
+            }
+
             // 换算
-            const 原营业时间_天 = 原营业时间 / 86400;
+            const 原营业时间_天 = (单份时间 * 份数) / 86400;
             const 品级_小数 = 品级 / 100;
             const 暴击概率_小数 = 暴击概率 / 100;
             const 开业时间减少_小数 = 开业时间减少 / 100;
@@ -321,16 +318,32 @@
             const 等效琉璃效率 = 实际帖率 * (实际金帖率 * 160 + (1 - 实际金帖率) * 30) * 折扣;
 
             // 输出
-            document.getElementById('out-帖率').textContent = (实际帖率 * 100).toFixed(2);
-            document.getElementById('out-金帖率').textContent = (实际金帖率 * 100).toFixed(2);
-            document.getElementById('out-净琉璃').textContent = Math.round(净琉璃效率);
-            document.getElementById('out-等效琉璃').textContent = Math.round(等效琉璃效率);
+            document.getElementById('out-帖率').innerHTML = (实际帖率 * 100).toFixed(2) + '<span class="result-unit">%</span>';
+            document.getElementById('out-金帖率').innerHTML = (实际金帖率 * 100).toFixed(2) + '<span class="result-unit">%</span>';
+            document.getElementById('out-净琉璃').innerHTML = Math.round(净琉璃效率) + '<span class="result-unit">/天</span>';
+            document.getElementById('out-等效琉璃').innerHTML = Math.round(等效琉璃效率) + '<span class="result-unit">/天</span>';
         }
 
         // 监听所有输入变化
         document.querySelectorAll('input, select').forEach(el => {
             el.addEventListener('input', calc);
             el.addEventListener('change', calc);
+        });
+
+        // 开业时间减少：上下箭头 ±1，保留小数位
+        const 开业时间输入 = document.getElementById('开业时间减少');
+        开业时间输入.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const cur = parseFloat(this.value) || 0;
+                const decimals = (this.value.split('.')[1] || '').length;
+                const delta = e.key === 'ArrowUp' ? 1 : -1;
+                const next = cur + delta;
+                if (next >= 0 && next <= 99) {
+                    this.value = next.toFixed(decimals);
+                    calc();
+                }
+            }
         });
 
         // 初始计算
