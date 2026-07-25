@@ -217,9 +217,9 @@
                 <label>品级 <span class="label-unit"></span></label>
                 <select id="品级">
                     <option value="20" selected>神传</option>
-                    <option value="15">特</option>
-                    <option value="10">优</option>
-                    <option value="5">可</option>
+                    <option value="16">特</option>
+                    <option value="1">优</option>
+                    <option value="0">可</option>
                 </select>
             </div>
         </div>
@@ -242,13 +242,19 @@
             </div>
             <div class="form-group">
                 <label>开业时间减少 <span class="label-unit">%</span></label>
-                <input type="number" id="开业时间减少" value="34.9" step="any" min="0" max="99">
+                <input type="number" id="开业时间减少" value="84.9" step="any" min="0" max="99">
             </div>
         </div>
 
-        <div class="form-group">
-            <label>单份时间 <span class="label-unit">秒</span></label>
-            <input type="number" id="单份时间" value="93" step="1" min="1">
+        <div class="input-row">
+            <div class="form-group">
+                <label>单份时间 <span class="label-unit">秒</span></label>
+                <input type="number" id="单份时间" value="93" step="1" min="1">
+            </div>
+            <div class="form-group">
+                <label>开业间隔 <span class="label-unit">秒</span></label>
+                <input type="number" id="开业间隔" value="0" step="1" min="0">
+            </div>
         </div>
 
         <hr class="divider">
@@ -286,6 +292,7 @@
             const 暴击概率 = parseFloat(document.getElementById('暴击概率').value) || 0;
             const 单份时间 = parseFloat(document.getElementById('单份时间').value) || 1;
             const 开业时间减少 = parseFloat(document.getElementById('开业时间减少').value) || 0;
+            const 开业间隔 = parseFloat(document.getElementById('开业间隔').value) || 0;
 
             // 份数无效或低于 7，全部归零
             if (!(份数 >= 7)) {
@@ -309,7 +316,7 @@
             const 实际金帖率 = 1.25 * (金帖率 / 100) + 品级_小数;
 
             // 折扣因子（公因子）
-            const 折扣 = (1 + 暴击概率_小数) / (原营业时间_天 * (1 - 开业时间减少_小数));
+            const 折扣 = (1 + 暴击概率_小数) / (原营业时间_天 * (1 - 开业时间减少_小数) + 开业间隔 / 86400);
 
             // 净琉璃效率
             const 净琉璃效率 = 实际帖率 * (实际金帖率 * 60 + (1 - 实际金帖率) * 30) * 折扣;
