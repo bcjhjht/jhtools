@@ -273,11 +273,11 @@
         <div class="input-row">
             <div class="form-group">
                 <label>帖率 <span class="label-unit">%</span></label>
-                <input type="number" id="帖率" value="131" step="1" min="0">
+                <input type="number" id="帖率" value="157" step="1" min="0">
             </div>
             <div class="form-group">
                 <label>金帖率 <span class="label-unit">%</span></label>
-                <input type="number" id="金帖率" value="15" step="1" min="0">
+                <input type="number" id="金帖率" value="30" step="1" min="0">
             </div>
         </div>
 
@@ -316,11 +316,11 @@
             </div>
             <div class="result-card highlight">
                 <div class="result-label">琉璃效率</div>
-                <div class="result-value" id="out-净琉璃">--<span class="result-unit">/天</span></div>
+                <div class="result-value" id="out-琉璃">--<span class="result-unit">/天</span></div>
             </div>
             <div class="result-card highlight">
                 <div class="result-label">遗玉效率</div>
-                <div class="result-value" id="out-等效琉璃">--<span class="result-unit">/天</span></div>
+                <div class="result-value" id="out-遗玉">--<span class="result-unit">/天</span></div>
             </div>
         </div>
 
@@ -367,8 +367,8 @@
             if (!(份数 >= 基准)) {
                 document.getElementById('out-帖率').innerHTML = '0.00<span class="result-unit">%</span>';
                 document.getElementById('out-金帖率').innerHTML = '0.00<span class="result-unit">%</span>';
-                document.getElementById('out-净琉璃').innerHTML = '0<span class="result-unit">/天</span>';
-                document.getElementById('out-等效琉璃').innerHTML = '0<span class="result-unit">/天</span>';
+                document.getElementById('out-琉璃').innerHTML = '0<span class="result-unit">/天</span>';
+                document.getElementById('out-遗玉').innerHTML = '0<span class="result-unit">/天</span>';
                 return;
             }
 
@@ -398,8 +398,8 @@
             // 输出
             document.getElementById('out-帖率').innerHTML = (实际帖率 * 100).toFixed(2) + '<span class="result-unit">%</span>';
             document.getElementById('out-金帖率').innerHTML = (实际金帖率 * 100).toFixed(2) + '<span class="result-unit">%</span>';
-            document.getElementById('out-净琉璃').innerHTML = Math.round(琉璃效率) + '<span class="result-unit">/天</span>';
-            document.getElementById('out-等效琉璃').innerHTML = 遗玉效率.toFixed(2) + '<span class="result-unit">/天</span>';
+            document.getElementById('out-琉璃').innerHTML = Math.round(琉璃效率) + '<span class="result-unit">/天</span>';
+            document.getElementById('out-遗玉').innerHTML = 遗玉效率.toFixed(2) + '<span class="result-unit">/天</span>';
         }
 
         // 监听所有输入变化
